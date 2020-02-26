@@ -20,10 +20,10 @@ a(n) = a(n-1) + 1
 
 우리가 필요한 값은 최솟값이므로,  3가지 경우 중 최솟값을 선택하면서 찾으면 된다.
 
-<img src="/doc/backjoon1463/tiemcomplexity1.png"> 
+<img src="/doc/backjoon1463/timecomplexity1.png"> 
 
 <일반적인 경우>
 
-<img src="/doc/backjoon1463/tiemcomplexity2.png"> 
+<img src="/doc/backjoon1463/timecomplexity2.png"> 
 
 <memoization을 적용한 경우>
