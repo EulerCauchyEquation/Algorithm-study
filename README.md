@@ -9,3 +9,4 @@
 * [백준 1463번 : 1로 만들기](./src/main/java/com/backjoon/dynamic/p1463)
 * [백준 1912번 : 연속합](./src/main/java/com/backjoon/dynamic/p1912)
 * [백준 11057번: 오르막 수](./src/main/java/com/backjoon/dynamic/p11057)
+* [백준 1149번: RGB거리](./src/main/java/com/backjoon/dynamic/p1149)
