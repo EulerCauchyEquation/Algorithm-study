@@ -10,3 +10,4 @@
 * [백준 1912번 : 연속합](./src/main/java/com/backjoon/dynamic/p1912)
 * [백준 11057번: 오르막 수](./src/main/java/com/backjoon/dynamic/p11057)
 * [백준 1149번: RGB거리](./src/main/java/com/backjoon/dynamic/p1149)
+* [백준 2156번: 포도주 시식](./src/main/java/com/backjoon/dynamic/p2156)
