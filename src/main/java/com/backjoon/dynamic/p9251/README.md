@@ -25,11 +25,11 @@ DP 문제 중 가장 헤맸다. 시간 복잡도도 생각하기 힘들었다. m
 
 "ABCD"와 "AEBD" 예
 
-<img src="/doc/backjoon9251/tiemcomplexity1.png"> 
+<img src="/doc/backjoon9251/timecomplexity1.png"> 
 
 <일반적인 경우>
 
-<img src="/doc/backjoon9251/tiemcomplexity2.png"> 
+<img src="/doc/backjoon9251/timecomplexity2.png"> 
 
 <memoization을 적용한 경우>
 
