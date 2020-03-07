@@ -14,3 +14,4 @@
 * [백준 14501번 : 퇴사](./src/main/java/com/backjoon/dynamic/p14501)
 * [백준 1890번 : 점프](./src/main/java/com/backjoon/dynamic/p1890)
 * [백준 9251번 : LCS](./src/main/java/com/backjoon/dynamic/p9251)
+* [백준 2011번 : 암호코드](./src/main/java/com/backjoon/dynamic/p2011)
