@@ -15,3 +15,4 @@
 * [백준 1890번 : 점프](./src/main/java/com/backjoon/dynamic/p1890)
 * [백준 9251번 : LCS](./src/main/java/com/backjoon/dynamic/p9251)
 * [백준 2011번 : 암호코드](./src/main/java/com/backjoon/dynamic/p2011)
+* [백준 2302번 : 극장 좌석](./src/main/java/com/backjoon/dynamic/p2302)
