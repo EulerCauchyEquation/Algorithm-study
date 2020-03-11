@@ -17,3 +17,4 @@
 * [백준 2011번 : 암호코드](./src/main/java/com/backjoon/dynamic/p2011)
 * [백준 2302번 : 극장 좌석](./src/main/java/com/backjoon/dynamic/p2302)
 * [백준 10164번 : 격자상의 격로](./src/main/java/com/backjoon/dynamic/p10164)
+* [백준 2169 : 로봇 조종하기](./src/main/java/com/backjoon/dynamic/p2169)
