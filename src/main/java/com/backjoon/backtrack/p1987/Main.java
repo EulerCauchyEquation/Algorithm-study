@@ -1,4 +1,4 @@
-package com.backjoon.dynamic.p1987;
+package com.backjoon.backtrack.p1987;
 
 import java.util.HashMap;
 import java.util.Map;

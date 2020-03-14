@@ -1,4 +1,4 @@
-package com.backjoon.dynamic.p9663;
+package com.backjoon.backtrack.p9663;
 
 import java.util.LinkedList;
 import java.util.Scanner;

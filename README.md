@@ -20,5 +20,5 @@
 * [백준 2169 : 로봇 조종하기](./src/main/java/com/backjoon/dynamic/p2169)
 
 ## backtrack
-* [백준 1987 : 알파벳](./src/main/java/com/backjoon/dynamic/p1987)
-* [백준 9663 : N-Queen](./src/main/java/com/backjoon/dynamic/p9663)
+* [백준 1987 : 알파벳](./src/main/java/com/backjoon/backtrack/p1987)
+* [백준 9663 : N-Queen](./src/main/java/com/backjoon/backtrack/p9663)
