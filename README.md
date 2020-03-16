@@ -24,3 +24,4 @@
 * [백준 9663 : N-Queen](./src/main/java/com/backjoon/backtrack/p9663)
 * [백준 1342 : 행운의 문자열](./src/main/java/com/backjoon/backtrack/p1342)
 * [백준 2661 : 좋은수열](./src/main/java/com/backjoon/backtrack/p2661)
+* 백준 2661 : 좋은수열
