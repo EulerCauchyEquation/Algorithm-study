@@ -18,6 +18,7 @@
 * [백준 2302번 : 극장 좌석](./src/main/java/com/backjoon/dynamic/p2302)
 * [백준 10164번 : 격자상의 격로](./src/main/java/com/backjoon/dynamic/p10164)
 * [백준 2169 : 로봇 조종하기](./src/main/java/com/backjoon/dynamic/p2169)
+* 백준 1520 : 내리막 길
 
 ## backtrack
 * [백준 1987 : 알파벳](./src/main/java/com/backjoon/backtrack/p1987)
