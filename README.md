@@ -25,3 +25,4 @@
 * [백준 1342 : 행운의 문자열](./src/main/java/com/backjoon/backtrack/p1342)
 * [백준 2661 : 좋은수열](./src/main/java/com/backjoon/backtrack/p2661)
 * 백준 1339 : 단어 수학
+* 백준 2210 : 숫자판 점프
