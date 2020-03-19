@@ -31,3 +31,4 @@
 
 ## greedy
 * [백준 11047 : 동전 0](./src/main/java/com/backjoon/greedy/p11047)
+* [백준 1931 : 회의실배정](./src/main/java/com/backjoon/greedy/p1931)
