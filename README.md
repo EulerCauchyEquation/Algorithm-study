@@ -28,6 +28,7 @@
 * 백준 1339 : 단어 수학
 * 백준 2210 : 숫자판 점프
 * [백준 3109 : 빵집](./src/main/java/com/backjoon/backtrack/p3109)
+* 백준 2023 : 이친수
 
 ## greedy
 * [백준 11047 : 동전 0](./src/main/java/com/backjoon/greedy/p11047)
