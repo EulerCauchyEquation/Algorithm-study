@@ -14,64 +14,62 @@ import java.util.StringTokenizer;
  */
 public class Main {
     static int[][][] memo;
-    static int W;
-    static int result;
 
     public static void main(String[] args) {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        int w = 0;
-        int[] plumTimes;
+        int w;
+        int[] times;
         try {
             String line = in.readLine();
             StringTokenizer stk = new StringTokenizer(line);
             int n = Integer.parseInt(stk.nextToken());
             w = Integer.parseInt(stk.nextToken());
-            plumTimes = new int[n];
+            times = new int[n];
 
-            for (int i = 0; i < plumTimes.length; i++) {
-                plumTimes[i] = Integer.parseInt(in.readLine());
+            for (int i = 0; i < times.length; i++) {
+                times[i] = Integer.parseInt(in.readLine());
             }
         } catch (IOException e) {
             throw new RuntimeException();
         }
 
-        System.out.println(solve(plumTimes, w));
+        System.out.println(solve(times, w));
     }
 
-    public static int solve(int[] plumTimes, int w) {
-        W = w;
-        result = 0;
-        memo = new int[plumTimes.length][w + 1][3];
-        for (int i = 0; i < plumTimes.length; i++) {
+    public static int solve(int[] times, int w) {
+        memo = new int[times.length][w + 1][3];
+        for (int i = 0; i < times.length; i++) {
             for (int j = 0; j < w + 1; j++) {
                 Arrays.fill(memo[i][j], -1);
             }
         }
-        dfs(0, 1, 0, 0, plumTimes);
-        dfs(0, 2, 1, 0, plumTimes);
-        return result;
+        return Math.max(
+                dfs(0, 1, w, times),
+                dfs(0, 2, w - 1, times));
     }
 
-    private static void dfs(int time, int plum, int w, int hit, int[] plumTimes) {
-        if (time == plumTimes.length) {
-            result = Math.max(result, hit);
-            return;
+    private static int dfs(int time, int pos, int strength, int[] times) {
+        if (time == times.length - 1) {
+            return pos == times[time] ? 1 : 0;
         }
-        if (memo[time][w][plum] > -1) {
-            memo[time][w][plum] = Math.min(memo[time][w][plum], hit);
-            return;
+        if (memo[time][strength][pos] > -1) {
+            return memo[time][strength][pos];
         }
 
-        hit += (plum == plumTimes[time]) ? 1 : 0;
-        memo[time][w][plum] = hit;
-        for (int plumType = 1; plumType <= 2; plumType++) {
-            boolean hasMoved = (plumType != plum);
-            if (hasMoved && W > w) {
-                dfs(time + 1, plumType, w + 1, hit, plumTimes);
+        int hit = (pos == times[time]) ? 1 : 0;
+        int[] cases = new int[2];
+        for (int nextPos = 1; nextPos <= 2; nextPos++) {
+            boolean hasMoved = (nextPos != pos);
+            if ((strength > 0) && hasMoved) {
+                // case 1. 움직일 힘이 남아있고, 이동 함
+                cases[0] = dfs(time + 1, nextPos, strength - 1, times);
             } else if (!hasMoved) {
-                dfs(time + 1, plumType, w, hit, plumTimes);
+                // case 2. 이동 안 함(움직일 힘이 남아있든 없든)
+                cases[1] = dfs(time + 1, nextPos, strength, times);
             }
         }
+        memo[time][strength][pos] = Math.max(cases[0], cases[1]) + hit;
+        return memo[time][strength][pos];
     }
 }
