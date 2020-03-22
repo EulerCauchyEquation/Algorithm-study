@@ -20,6 +20,7 @@
 * [백준 2169 : 로봇 조종하기](./src/main/java/com/backjoon/dynamic/p2169)
 * 백준 1520 : 내리막 길
 * [백준 2240 : 자두나무](./src/main/java/com/backjoon/dynamic/p2240)
+* [백준 2629 : 양팔저울](./src/main/java/com/backjoon/backtrack/p2629)
 
 ## backtrack
 * [백준 1987 : 알파벳](./src/main/java/com/backjoon/backtrack/p1987)
@@ -36,3 +37,4 @@
 * [백준 1931 : 회의실배정](./src/main/java/com/backjoon/greedy/p1931)
 * [백준 1541 : 잃어버린 괄호](./src/main/java/com/backjoon/greedy/p1541)
 * 백준 1120 : 문자열 
+* 백준 2437 : 저울 
