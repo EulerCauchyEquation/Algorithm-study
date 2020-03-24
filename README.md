@@ -23,6 +23,7 @@
 * [백준 2629 : 양팔저울](./src/main/java/com/backjoon/backtrack/p2629)
 
 * 프로그래머스 : 정수 삼각형
+* [프로그래머스 : 카드게임](./src/main/java/com/programmers/dynamic/p5)
 
 ## backtrack
 * [백준 1987 : 알파벳](./src/main/java/com/backjoon/backtrack/p1987)
