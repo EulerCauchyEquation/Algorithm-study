@@ -22,6 +22,8 @@
 * [백준 2240 : 자두나무](./src/main/java/com/backjoon/dynamic/p2240)
 * [백준 2629 : 양팔저울](./src/main/java/com/backjoon/backtrack/p2629)
 
+* 프로그래머스 : 정수 삼각형
+
 ## backtrack
 * [백준 1987 : 알파벳](./src/main/java/com/backjoon/backtrack/p1987)
 * [백준 9663 : N-Queen](./src/main/java/com/backjoon/backtrack/p9663)
