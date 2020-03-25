@@ -16,21 +16,17 @@ public class Solution {
 
     public static int solution(int[] houses) {
         memo = new int[houses.length][Act.values().length];
-        for (int[] m : memo) {
-            Arrays.fill(m, NOT_VISITED);
-        }
 
         int answer = 0;
         for (Act act : Act.values()) {
-            int next = act.next;
-            int money = act.isStealAction() ? houses[0] : 0;
+            for (int[] m : memo) {
+                Arrays.fill(m, NOT_VISITED);
+            }
             hasSelectedFirstElement = act.isStealAction();
 
-            System.out.println();
-            answer = Math.max(
-                    dfs(next, act, houses) + money,
-                    answer);
+            answer = Math.max(dfs(0, act, houses), answer);
         }
+
         return answer;
     }
 
@@ -41,22 +37,15 @@ public class Solution {
         if (n >= houses.length) {
             return 0;
         }
-        /*if (memo[n][act.ordinal()] != NOT_VISITED) {
+        if (memo[n][act.ordinal()] != NOT_VISITED) {
             return memo[n][act.ordinal()];
-        }*/
-
-        int stolenMoney = 0;
-        for (Act nextAct : Act.values()) {
-            int next = n + nextAct.next;
-            int money = nextAct.isStealAction() ? houses[n] : 0;
-
-            stolenMoney = Math.max(
-                    dfs(next, nextAct, houses) + money,
-                    stolenMoney);
         }
-        memo[n][act.ordinal()] = stolenMoney;
 
-        System.out.println(n + "\t" + stolenMoney + "\t" + act);
+        int money = act.isStealAction() ? houses[n] : 0;
+        memo[n][act.ordinal()] = Math.max(
+                dfs(n + act.next, Act.PASS, houses),
+                dfs(n + act.next, Act.STEAL, houses)) + money;
+
         return memo[n][act.ordinal()];
     }
 

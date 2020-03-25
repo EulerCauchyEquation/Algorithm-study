@@ -21,4 +21,16 @@ public class SolutionTest {
         int[] money = {5, 1, 2, 100, 3};
         Assert.assertThat(105, CoreMatchers.is(Solution.solution(money)));
     }
+
+    @Test
+    public void 예제3() {
+        int[] money = {3, 6, 9};
+        Assert.assertThat(9, CoreMatchers.is(Solution.solution(money)));
+    }
+
+    @Test
+    public void 예제4() {
+        int[] money = {100, 1, 1, 100, 1, 5};
+        Assert.assertThat(200, CoreMatchers.is(Solution.solution(money)));
+    }
 }
