@@ -9,58 +9,30 @@ import java.util.Arrays;
  * @since 20.03.24
  */
 public class Solution {
-    static final int NOT_VISITED = -1;
-
-    static int[][] memo;
-    static boolean hasSelectedFirstElement;
+    static int[] memo;
 
     public static int solution(int[] houses) {
-        memo = new int[houses.length][Act.values().length];
-
+        int n = houses.length;
+        memo = new int[n];
         int answer = 0;
-        for (Act act : Act.values()) {
-            for (int[] m : memo) {
-                Arrays.fill(m, NOT_VISITED);
-            }
-            hasSelectedFirstElement = act.isStealAction();
 
-            answer = Math.max(dfs(0, act, houses), answer);
+        memo[0] = houses[0];
+        memo[1] = houses[0];
+        for (int i = 2; i < n - 1; i++) {
+            memo[i] = Math.max(
+                    memo[i - 2] + houses[i],
+                    memo[i - 1]);
+        }
+        answer = Math.max(memo[n - 2], answer);
+
+        Arrays.fill(memo, 0);
+        memo[1] = houses[1];
+        for (int i = 2; i < n; i++) {
+            memo[i] = Math.max(
+                    memo[i - 2] + houses[i],
+                    memo[i - 1]);
         }
 
-        return answer;
-    }
-
-    private static int dfs(int n, Act act, int[] houses) {
-        if ((n == houses.length - 1) && hasSelectedFirstElement) {
-            return 0;
-        }
-        if (n >= houses.length) {
-            return 0;
-        }
-        if (memo[n][act.ordinal()] != NOT_VISITED) {
-            return memo[n][act.ordinal()];
-        }
-
-        int money = act.isStealAction() ? houses[n] : 0;
-        memo[n][act.ordinal()] = Math.max(
-                dfs(n + act.next, Act.PASS, houses),
-                dfs(n + act.next, Act.STEAL, houses)) + money;
-
-        return memo[n][act.ordinal()];
-    }
-
-    enum Act {
-        PASS(1),
-        STEAL(2);
-
-        int next;
-
-        Act(int next) {
-            this.next = next;
-        }
-
-        private boolean isStealAction() {
-            return this.next == STEAL.next;
-        }
+        return Math.max(memo[n - 1], answer);
     }
 }
