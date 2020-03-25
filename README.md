@@ -25,6 +25,7 @@
 #####
 * 프로그래머스 : 정수 삼각형
 * [프로그래머스 : 카드 게임](./src/main/java/com/programmers/dynamic/p5)
+* [프로그래머스 : 도둑질](./src/main/java/com/programmers/dynamic/p6)
 
 ## backtrack
 * [백준 1987 : 알파벳](./src/main/java/com/backjoon/backtrack/p1987)
