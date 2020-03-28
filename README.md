@@ -43,4 +43,9 @@
 * [백준 1931 : 회의실배정](./src/main/java/com/backjoon/greedy/p1931)
 * [백준 1541 : 잃어버린 괄호](./src/main/java/com/backjoon/greedy/p1541)
 * 백준 1120 : 문자열 
-* 백준 2437 : 저울 
+* 백준 2437 : 저울
+
+
+## 카카오 코딩 테스트
+ * [카카오 2020 인턴십 모의고사 : 문제 1번](./src/main/java/com/kakao/v2020/mocktest/p1)
+ * [카카오 2020 인턴십 모의고사 : 문제 4번](./src/main/java/com/kakao/v2020/mocktest/p4) 
