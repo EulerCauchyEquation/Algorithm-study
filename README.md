@@ -45,6 +45,7 @@
 * [백준 1541 : 잃어버린 괄호](./src/main/java/com/backjoon/greedy/p1541)
 * 백준 1120 : 문자열 
 * 백준 2437 : 저울
+* 백준 1946 : 신입 사원
 
 ## DFS/BFS
 * [백준 9466 : 텀 프로젝트](./src/main/java/com/backjoon/dfs/p9466)
