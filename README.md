@@ -21,7 +21,8 @@
 * [백준 2169 : 로봇 조종하기](./src/main/java/com/backjoon/dynamic/p2169)
 * 백준 1520 : 내리막 길
 * [백준 2240 : 자두나무](./src/main/java/com/backjoon/dynamic/p2240)
-* [백준 2629 : 양팔저울](./src/main/java/com/backjoon/backtrack/p2629) 
+* [백준 2629 : 양팔저울](./src/main/java/com/backjoon/backtrack/p2629)
+* 백준 1937 : 욕심쟁이 판다
 
 #####
 * 프로그래머스 : 정수 삼각형
