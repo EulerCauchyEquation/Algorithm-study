@@ -6,7 +6,7 @@
 
 ## 요구사항
 
-<img src="/doc/backjoon/dfs/p1890/requirement.png"> 
+<img src="/doc/backjoon/dfs/p9466/requirement.png"> 
 
 ## 풀이
 
