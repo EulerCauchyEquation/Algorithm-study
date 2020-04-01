@@ -1,6 +1,5 @@
 package com.backjoon.dfs.p9466;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
@@ -11,10 +10,16 @@ import java.util.StringTokenizer;
  * @since 20.03.31
  */
 public class Main {
+    static final int NOT_VISITED = 0;
+    static final int SEARCHING = 1;
+    static final int FINISHED = 2;
+    static final int CYCLE = 3;
+
     static int[] mWanted;
-    static boolean[] visited;
-    static boolean hasTeam;
-    static int result;
+
+    static int[] visited;
+    static boolean[] cycle;
+    static int cycleVertex;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -36,33 +41,33 @@ public class Main {
 
     public static int solve(int[] wanted) {
         mWanted = wanted.clone();
-        visited = new boolean[wanted.length];
-        result = 0;
+        visited = new int[wanted.length];
+        cycle = new boolean[wanted.length];
+        cycleVertex = 0;
 
         for (int studentNo = 1; studentNo < wanted.length; studentNo++) {
-            Arrays.fill(visited, false);
-            visited[studentNo] = true;
-            hasTeam = false;
-
-            dfs(mWanted[studentNo], studentNo);
-            result = hasTeam ? result
-                    : (result += 1);
+            dfs(mWanted[studentNo]);
         }
 
-        return result;
+        return (wanted.length - 1) - cycleVertex;
     }
 
-    private static void dfs(int studentNo, int wantedNo) {
-        if (studentNo == wantedNo) {
-            hasTeam = true;
+    private static void dfs(int here) {
+        if (visited[here] == FINISHED) {
+            return;
+        }
+        if (visited[here] == CYCLE) {
             return;
         }
 
-        if (visited[studentNo]) {
-            return;
+        if (visited[here] == SEARCHING) {
+            visited[here] = CYCLE;
+            cycleVertex++;
+        } else if (visited[here] == NOT_VISITED) {
+            visited[here] = SEARCHING;
         }
 
-        visited[studentNo] = true;
-        dfs(mWanted[studentNo], wantedNo);
+        dfs(mWanted[here]);
+        visited[here] = FINISHED;
     }
 }
