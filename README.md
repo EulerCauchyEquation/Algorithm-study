@@ -2,6 +2,7 @@
 이력을 남기면서 해보자..<br>
 다시 도약을 위해
 
+링크를 남기지 않은 문제는 중복된 문제여서 얻은 게 없어서, 해설하지 않은 문서다.
 
 ## dynamic programming
 * [백준 2579번 : 사다리 타기](./src/main/java/com/backjoon/dynamic/p2579)
@@ -45,6 +46,12 @@
 * 백준 1120 : 문자열 
 * 백준 2437 : 저울
 
+## DFS/BFS
+* [백준 9466 : 텀 프로젝트](./src/main/java/com/backjoon/dfs/p9466)
+
+#####
+* 프로그래머스 : 타겟 넘버 
+* 프로그래머스 : 단어 변환
 
 ## 카카오 코딩 테스트
  * [카카오 2020 인턴십 모의고사 : 문제 1번](./src/main/java/com/kakao/v2020/mocktest/p1)
