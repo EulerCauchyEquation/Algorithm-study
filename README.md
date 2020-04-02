@@ -23,6 +23,7 @@
 * [백준 2240 : 자두나무](./src/main/java/com/backjoon/dynamic/p2240)
 * [백준 2629 : 양팔저울](./src/main/java/com/backjoon/backtrack/p2629)
 * 백준 1937 : 욕심쟁이 판다
+* 백준 1496 : 기타 리스트
 
 #####
 * 프로그래머스 : 정수 삼각형
@@ -47,10 +48,12 @@
 * 백준 1120 : 문자열 
 * 백준 2437 : 저울
 * 백준 1946 : 신입 사원
+* [백준 2875 : 대회 or 인턴](./src/main/java/com/backjoon/greedy/p2875)
 
 ## DFS/BFS
 * [백준 9466 : 텀 프로젝트](./src/main/java/com/backjoon/dfs/p9466)
 * 백준 2178 : 미로 탐색
+* 백준 1697 : 숨바꼭질
 
 #####
 * 프로그래머스 : 타겟 넘버 
