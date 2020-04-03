@@ -1,8 +1,6 @@
 package com.backjoon.dynamic.p11053;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * 백준 11053 : LIS
@@ -37,7 +35,8 @@ public class Main {
             Arrays.fill(m, -1);
         }
 
-        return dfs(0, 0);
+        //  return dfs(0, 0);
+        return LIS(sequence);
     }
 
     private static int dfs(int n, int standard) {
@@ -56,5 +55,43 @@ public class Main {
         memo[n][standard] = Math.max(selectCase, skipCase);
 
         return memo[n][standard];
+    }
+
+    private static int LIS(int[] sequence) {
+        List<Integer> list = new ArrayList<>();
+        list.add(sequence[0]);
+
+        for (int index = 1; index < sequence.length; index++) {
+            if (sequence[index] <= list.get(list.size() - 1)) {
+                int temp = binarySearch(0, list.size() - 1, sequence[index], list);
+                list.set(temp, sequence[index]);
+            } else {
+                list.add(sequence[index]);
+            }
+        }
+
+        return list.size();
+    }
+
+    public static int binarySearch(int begin, int end, int key, List<Integer> list) {
+        int left = begin;
+        int right = end;
+
+        int result = 0;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+
+            if (key < list.get(mid)) {
+                right = mid - 1;
+            } else if (list.get(mid) < key) {
+                left = mid + 1;
+            } else {
+                result = mid;
+                break;
+            }
+            result = mid;
+        }
+
+        return result;
     }
 }

@@ -44,4 +44,11 @@ public class MainTest {
 
         Assert.assertThat(3, CoreMatchers.is(Main.solve(sequence)));
     }
+
+    @Test
+    public void 예제6() {
+        int[] sequence = {10, 10};
+
+        Assert.assertThat(1, CoreMatchers.is(Main.solve(sequence)));
+    }
 }
