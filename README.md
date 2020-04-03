@@ -52,6 +52,7 @@
 
 #####
 * [프로그래머스 : 저울](./src/main/java/com/programmers/greedy/p7)
+* 프로그래머스 : 단속카메라
 
 ## DFS/BFS
 * [백준 9466 : 텀 프로젝트](./src/main/java/com/backjoon/dfs/p9466)
