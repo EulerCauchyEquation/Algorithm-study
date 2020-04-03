@@ -49,6 +49,7 @@
 * 백준 2437 : 저울
 * 백준 1946 : 신입 사원
 * [백준 2875 : 대회 or 인턴](./src/main/java/com/backjoon/greedy/p2875)
+* 백준 2352 : 반도체 설계
 
 #####
 * [프로그래머스 : 저울](./src/main/java/com/programmers/greedy/p7)
