@@ -50,6 +50,9 @@
 * 백준 1946 : 신입 사원
 * [백준 2875 : 대회 or 인턴](./src/main/java/com/backjoon/greedy/p2875)
 
+#####
+* [프로그래머스 : 저울](./src/main/java/com/programmers/greedy/p7)
+
 ## DFS/BFS
 * [백준 9466 : 텀 프로젝트](./src/main/java/com/backjoon/dfs/p9466)
 * 백준 2178 : 미로 탐색
