@@ -66,6 +66,9 @@
 * 프로그래머스 : 타겟 넘버 
 * 프로그래머스 : 단어 변환
 
+## sliding window
+* 백준 2003 : 수들의 합 2
+
 ## 카카오 코딩 테스트
  * [카카오 2020 인턴십 모의고사 : 문제 1번](./src/main/java/com/kakao/v2020/mocktest/p1)
  * [카카오 2020 인턴십 모의고사 : 문제 4번](./src/main/java/com/kakao/v2020/mocktest/p4) 
