@@ -3,18 +3,15 @@ package com.backjoon.dynamic.p2096;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
  * 백준 2096번 : 내려가기
  *
  * @author 송훤출
- * @since 20.04.06
+ * @since 20.04.07
  */
 public class Main {
-    static int[][] mBoard;
-    static int[][] memo;
 
     public static void main(String[] args) {
         int[][] board = createBoard();
@@ -27,13 +24,13 @@ public class Main {
 
         try {
             int n = Integer.parseInt(in.readLine());
-            int[][] board = new int[n][n];
+            int[][] board = new int[n][3];
 
             for (int i = 0; i < n; i++) {
                 String line = in.readLine();
                 StringTokenizer stk = new StringTokenizer(line);
 
-                for (int j = 0; j < n; j++) {
+                for (int j = 0; j < 3; j++) {
                     board[i][j] = Integer.parseInt(stk.nextToken());
                 }
             }
@@ -45,84 +42,35 @@ public class Main {
     }
 
     public static int[] solve(int[][] board) {
-        mBoard = board.clone();
-        memo = new int[board.length][board.length];
+        int[] temp = new int[3];
+        int[] max = new int[3];
 
-        int[] result = new int[2];
-        result[1] = Integer.MAX_VALUE;
+        for (int[] row : board) {
+            max[0] = row[0] + Math.max(temp[0], temp[1]);
+            max[1] = row[1] + Math.max(temp[0], Math.max(temp[1], temp[2]));
+            max[2] = row[2] + Math.max(temp[1], temp[2]);
 
-        for (int[] m : memo) {
-            Arrays.fill(m, -1);
-        }
-        for (int i = 0; i < board.length; i++) {
-            result[0] = Math.max(result[0], dfsMax(0, i));
-        }
-
-        for (int[] m : memo) {
-            Arrays.fill(m, Integer.MAX_VALUE);
-        }
-        for (int i = 0; i < board.length; i++) {
-            result[1] = Math.min(result[1], dfsMin(0, i));
-        }
-
-        return result;
-    }
-
-    private static int dfsMax(int m, int n) {
-        if (memo[m][n] != -1) {
-            return memo[m][n];
-        }
-
-        for (PlayCase playCase : PlayCase.values()) {
-            int x = m + playCase.x;
-            int y = n + playCase.y;
-
-            if (isValidPoint(x, y)) {
-                memo[m][n] = Math.max(memo[m][n],
-                        dfsMax(x, y));
+            for (int i = 0; i < 3; i++) {
+                temp[i] = max[i];
             }
         }
-        memo[m][n] = (memo[m][n] == -1) ? 0 : memo[m][n];
-        memo[m][n] += mBoard[m][n];
 
-        return memo[m][n];
-    }
+        temp = new int[3];
+        int[] min = new int[3];
 
-    private static int dfsMin(int m, int n) {
-        if (memo[m][n] != Integer.MAX_VALUE) {
-            return memo[m][n];
-        }
+        for (int[] row : board) {
+            min[0] = row[0] + Math.min(temp[0], temp[1]);
+            min[1] = row[1] + Math.min(temp[0], Math.min(temp[1], temp[2]));
+            min[2] = row[2] + Math.min(temp[1], temp[2]);
 
-        for (PlayCase playCase : PlayCase.values()) {
-            int x = m + playCase.x;
-            int y = n + playCase.y;
-
-            if (isValidPoint(x, y)) {
-                memo[m][n] = Math.min(memo[m][n],
-                        dfsMin(x, y));
+            for (int i = 0; i < 3; i++) {
+                temp[i] = min[i];
             }
         }
-        memo[m][n] = (memo[m][n] == Integer.MAX_VALUE) ? 0 : memo[m][n];
-        memo[m][n] += mBoard[m][n];
 
-        return memo[m][n];
-    }
-
-    private static boolean isValidPoint(int x, int y) {
-        return x >= 0 && y >= 0 && x < mBoard.length && y < mBoard.length;
-    }
-
-    enum PlayCase {
-        LEFT(1, -1),
-        RIGHT(1, 1),
-        CENTER(1, 0);
-
-        int x;
-        int y;
-
-        PlayCase(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
+        return new int[]{
+                Math.max(max[0], Math.max(max[1], max[2])),
+                Math.min(min[0], Math.min(min[1], min[2]))
+        };
     }
 }

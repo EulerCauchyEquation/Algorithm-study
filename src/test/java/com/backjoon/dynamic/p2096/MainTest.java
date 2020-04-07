@@ -25,8 +25,8 @@ public class MainTest {
     @Test
     public void 예제2() {
         int[][] board = {
-                {0, 0},
-                {0, 0},
+                {0, 0, 0},
+                {0, 0, 0},
         };
 
         Assert.assertThat(new int[]{0, 0}, is(Main.solve(board)));
