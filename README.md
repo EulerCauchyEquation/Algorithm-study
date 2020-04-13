@@ -81,6 +81,7 @@
 ## stack
 * [백준 2493 : 탑](./src/main/java/com/backjoon/stack/p2493)
 * [백준 9012 : 괄호](./src/main/java/com/backjoon/stack/p9012)
+* 백준 5076 : Web Pages
 
 ## 카카오 코딩 테스트
 * 카카오 2018 코딩 테스트 : 비밀 지도
