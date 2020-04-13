@@ -19,9 +19,9 @@ public class Main {
     }
 
     private static int[][] ScannerService() {
+        int[][] values;
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(System.in));
-        int[][] values;
         try {
             int n = Integer.parseInt(in.readLine());
             values = new int[n][3];
@@ -36,6 +36,17 @@ public class Main {
             throw new RuntimeException();
         }
         return values;
+    }
+
+    private static Color[] createOtherColors(Color color) {
+        Color[] otherColors = new Color[2];
+        int i = 0;
+        for (Color otherColor : Color.values()) {
+            if (!otherColor.match(color)) {
+                otherColors[i++] = otherColor;
+            }
+        }
+        return otherColors;
     }
 
     public static int solve(int[][] values) {
@@ -60,17 +71,6 @@ public class Main {
                 util(n - 1, otherColors[0], values),
                 util(n - 1, otherColors[1], values)) + values[n][indexOfPreColor];
         return memo[n][indexOfPreColor];
-    }
-
-    private static Color[] createOtherColors(Color color) {
-        Color[] otherColors = new Color[2];
-        int i = 0;
-        for (Color otherColor : Color.values()) {
-            if (!otherColor.match(color)) {
-                otherColors[i++] = otherColor;
-            }
-        }
-        return otherColors;
     }
 
     private static int min(int value1, int value2, int value3) {
