@@ -78,9 +78,12 @@
 * [백준 1102 : 발전소](./src/main/java/com/backjoon/bitmask/p1102)
 * 백준 1562 : 계단 수
 
+## stack
+* [백준 2493 : 탑](./src/main/java/com/backjoon/stack/p2493)
+
 ## 카카오 코딩 테스트
 * 카카오 2018 코딩 테스트 : 비밀 지도
 
-
+#####
  * [카카오 2020 인턴십 모의고사 : 문제 1번](./src/main/java/com/kakao/v2020/mocktest/p1)
  * [카카오 2020 인턴십 모의고사 : 문제 4번](./src/main/java/com/kakao/v2020/mocktest/p4) 
