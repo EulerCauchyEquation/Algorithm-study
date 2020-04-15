@@ -1,4 +1,4 @@
-package com.programmers.trie;
+package com.programmers.trie.p2;
 
 import java.util.HashMap;
 import java.util.Map;

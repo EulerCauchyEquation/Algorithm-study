@@ -1,4 +1,4 @@
-package com.programmers.trie;
+package com.programmers.trie.p2;
 
 import org.junit.Assert;
 import org.junit.Test;
