@@ -60,12 +60,4 @@ public class SolutionTest {
 
         Assert.assertThat(Solution.solution(cacheSize, cities), is(25));
     }
-
-    @Test
-    public void 예제7() {
-        int cacheSize = 3;
-        String[] cities = {"0", "1", " 2", "3", "0", "1", "4", "0", "1", "2", "3", "4"};
-
-        Assert.assertThat(Solution.solution(cacheSize, cities), is(52));
-    }
 }
