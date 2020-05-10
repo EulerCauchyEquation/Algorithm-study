@@ -12,27 +12,12 @@ public class Solution {
     static Stack<Integer> stack;
 
     public static int solution(String dartResult) {
-        final char[] result = dartResult.toCharArray();
-        final StringBuilder score = new StringBuilder();
-        char bonus;
-        char option = '$';
         stack = new Stack<>();
         stack.push(0);
-
-        for (int i = 0; i < result.length; i++) {
-            if (Character.isDigit(result[i])) {
-                score.append(result[i]);
-            } else if (Character.isLetter(result[i])) {
-                if (i + 1 < result.length
-                        && !Character.isDigit(result[i + 1])) {
-                    option = result[i + 1];
-                }
-                bonus = result[i];
-                calculate(score, bonus, option);
-
-                score.setLength(0);
-                option = '$';
-            }
+        final String[] resultSet = dartResult
+                .split("((?<=[SDT])(?=\\d))|((?<=[*#])(?=\\d))");
+        for (String result : resultSet) {
+            calculate(result);
         }
 
         int sum = 0;
@@ -42,23 +27,28 @@ public class Solution {
         return sum;
     }
 
-    private static void calculate(StringBuilder score, char bonus, char option) {
-        int temp = Integer.parseInt(score.toString());
+    private static void calculate(String result) {
+        final String[] section = result.split("(?=[SDT])|(?=[*#])");
+        final int score = Integer.parseInt(section[0]);
+        final char bonus = section[1].charAt(0);
+        final char option = (section.length == 3) ? section[2].charAt(0) : '$';
 
         if (bonus == 'D') {
-            temp = (int) Math.pow(temp, 2);
+            stack.push((int) Math.pow(score, 2));
         } else if (bonus == 'T') {
-            temp = (int) Math.pow(temp, 3);
+            stack.push((int) Math.pow(score, 3));
         }
 
         if (option == '*') {
             final int prev = stack.pop();
             stack.push(prev * 2);
-            stack.push(temp * 2);
+            stack.push(score * 2);
         } else if (option == '#') {
-            stack.push(-temp);
+            final int top = stack.pop();
+            stack.push(-top);
         } else {
-            stack.push(temp);
+            final int top = stack.pop();
+            stack.push(top);
         }
     }
 }
