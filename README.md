@@ -98,6 +98,7 @@
 * [카카오 2018 코딩 테스트 : 다트 게임](./src/main/java/com/kakao/v2018/codingtest/dart)
 * 카카오 2018 코딩 테스트 : 캐시
 * [카카오 2018 코딩 테스트 : 셔틀 버스](./src/main/java/com/kakao/v2018/codingtest/bus)
+* [카카오 2018 코딩 테스트 : 추석 트래픽](./src/main/java/com/kakao/v2018/codingtest/traffic)
 
 #####
  * [카카오 2020 인턴십 모의고사 : 문제 1번](./src/main/java/com/kakao/v2020/mocktest/p1)
