@@ -99,7 +99,12 @@
 * 카카오 2018 코딩 테스트 : 캐시
 * [카카오 2018 코딩 테스트 : 셔틀 버스](./src/main/java/com/kakao/v2018/codingtest/bus)
 * [카카오 2018 코딩 테스트 : 추석 트래픽](./src/main/java/com/kakao/v2018/codingtest/traffic)
+* 카카오 2019 코딩 테스트 : 오픈 채팅방
+* 카카오 2019 코딩 테스트 : 실패율
+* 카카오 2019 코딩 테스트 : 길 찾기 게임
+* 카카오 2020 코딩 테스트 : 기사 검색
 
 #####
  * [카카오 2020 인턴십 모의고사 : 문제 1번](./src/main/java/com/kakao/v2020/mocktest/p1)
+ * [카카오 2020 인턴십 모의고사 : 문제 2번](./src/main/java/com/kakao/v2020/mocktest/p2)
  * [카카오 2020 인턴십 모의고사 : 문제 4번](./src/main/java/com/kakao/v2020/mocktest/p4) 
