@@ -113,3 +113,4 @@
 
 ### leetcode
 * LRU Cache
+* LFU Cache
